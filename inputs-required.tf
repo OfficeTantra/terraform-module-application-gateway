@@ -3,18 +3,14 @@ variable "env" {
   type        = string
 }
 
-variable "common_tags" {
-  description = "Common tag to be applied to resources"
-  type        = map(string)
-}
 
 variable "product" {
-  description = "https://hmcts.github.io/glossary/#product"
+  description = "Name of the product, e.g. 'hmpps'"
   type        = string
 }
 
 variable "component" {
-  description = "https://hmcts.github.io/glossary/#component"
+  description = "Name of the component"
   type        = string
 }
 
@@ -104,13 +100,7 @@ variable "ssl_cert_name" {
 
 }
 
-variable "key_vault_id" {
+variable "ssl_key_vault_id" {
   description = "ID of the Key Vault"
-  type        = string
-
-}
-
-variable "keyvault_rg" {
-  description = "Name of the resource group where the Key Vault is located"
   type        = string
 }
