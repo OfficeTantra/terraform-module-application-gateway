@@ -167,7 +167,7 @@ resource "azurerm_role_assignment" "identity" {
 resource "azurerm_web_application_firewall_policy" "waf_policy" {
 
   name                = "${var.product}-${var.env}-app-gateway-waf-policy"
-  resource_group_name = azurerm_resource_group.atlassian_rg.name
+  resource_group_name = var.existing_resource_group_name
   location            = var.location
   tags                = var.tags
 
