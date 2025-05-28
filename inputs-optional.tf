@@ -47,12 +47,8 @@ variable "sku_tier" {
   default     = "Basic"
 }
 
-variable "min_capacity" {
-  default = null
-}
-
-variable "max_capacity" {
-  default = null
+variable "capacity" {
+  default = 2
 }
 
 variable "app_gw_rewrite_rules" {

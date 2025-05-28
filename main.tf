@@ -7,8 +7,9 @@ resource "azurerm_application_gateway" "ag" {
   enable_http2        = var.enable_http2
   firewall_policy_id  = azurerm_web_application_firewall_policy.waf_policy.id
   sku {
-    name = var.sku_name
-    tier = var.sku_tier
+    name     = var.sku_name
+    tier     = var.sku_tier
+    capacity = var.capacity
   }
 
   gateway_ip_configuration {
