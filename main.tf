@@ -11,11 +11,6 @@ resource "azurerm_application_gateway" "ag" {
     tier = var.sku_tier
   }
 
-  autoscale_configuration {
-    min_capacity = var.min_capacity
-    max_capacity = var.max_capacity
-  }
-
   gateway_ip_configuration {
     name      = "gateway"
     subnet_id = var.subnet_id
