@@ -48,7 +48,7 @@ variable "sku_tier" {
 }
 
 variable "min_capacity" {
-  default = 0
+  default = null
 }
 
 variable "max_capacity" {
